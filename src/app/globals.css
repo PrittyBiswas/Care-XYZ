@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* DaisyUI base plugin */
+@plugin "daisyui" {
+  themes: ["careio"];
+}
+
+/* Custom Care.IO light theme */
+@plugin "daisyui/theme" {
+  name: "careio";
+  default: true;
+
+  --color-primary: #2B6CB0;
+  --color-secondary: #ED8936;
+  --color-accent: #4FD1C5;
+  --color-neutral: #48BB78;
+
+  /* Base colors */
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F7FAF9;
+  --color-base-300: #E5EDED;
+
+  /* Status colors */
+  --color-info: #3B82F6;
+  --color-success: #6BCF9D;
+  --color-warning: #FACC15;
+  --color-error: #EF4444;
+}
+
+/* Dark variant support */
+@custom-variant dark (&:where([data-theme="night"], [data-theme="night"] *));
